@@ -1,0 +1,16 @@
+pandas>=2.0
+numpy
+openpyxl
+pyarrow
+scikit-learn
+lightgbm
+shap
+matplotlib
+joblib
+mlflow
+fastapi
+uvicorn
+httpx
+pydantic>=2
+streamlit>=1.50
+pytest

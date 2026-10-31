@@ -1,0 +1,11 @@
+data/raw/*
+data/processed/*
+!data/**/.gitkeep
+__pycache__/
+.ipynb_checkpoints/
+mlruns/
+.venv/
+mlflow.db
+train_output.txt
+.pytest_cache/
+models/*.joblib

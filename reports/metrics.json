@@ -1,0 +1,120 @@
+{
+  "split": {
+    "train_cutoffs": [
+      "2010-06-09",
+      "2010-09-09",
+      "2010-12-09",
+      "2011-03-09"
+    ],
+    "val_cutoff": "2011-06-09",
+    "test_cutoff": "2011-09-09",
+    "n_train": 12233,
+    "n_val": 2625,
+    "n_test": 2775,
+    "test_churn_rate": 0.3848648648648649
+  },
+  "economics": {
+    "offer_cost": 10.0,
+    "value_if_saved": 80.0,
+    "save_rate": 0.2,
+    "break_even_probability": 0.625,
+    "profit_contact_everyone": -10662.0
+  },
+  "results": [
+    {
+      "model": "recency_only_logreg",
+      "roc_auc": 0.658394109735414,
+      "pr_auc": 0.5335651552387379,
+      "brier": 0.24338963708638625,
+      "precision@10%": 0.6064981949458483,
+      "lift@10%": 1.5758731188901958,
+      "precision@20%": 0.6018018018018018,
+      "lift@20%": 1.5636704119850187,
+      "profit_best_k": 92.0,
+      "best_k_fraction": 0.023783783783783784,
+      "profit_at_break_even_threshold": -701.9999999999991
+    },
+    {
+      "model": "logistic_regression",
+      "roc_auc": 0.751749241392021,
+      "pr_auc": 0.6347819796580475,
+      "brier": 0.20124332761342803,
+      "precision@10%": 0.7436823104693141,
+      "lift@10%": 1.9323206100677401,
+      "precision@20%": 0.7009009009009008,
+      "lift@20%": 1.8211610486891383,
+      "profit_best_k": 730.0,
+      "best_k_fraction": 0.2072072072072072,
+      "profit_at_break_even_threshold": -166.0
+    },
+    {
+      "model": "lightgbm_calibrated",
+      "roc_auc": 0.7655492694764233,
+      "pr_auc": 0.6356598029463789,
+      "brier": 0.20799949614116275,
+      "precision@10%": 0.6895306859205776,
+      "lift@10%": 1.7916176530239727,
+      "precision@20%": 0.6828828828828829,
+      "lift@20%": 1.7743445692883895,
+      "profit_best_k": 568.0000000000009,
+      "best_k_fraction": 0.19171171171171172,
+      "profit_at_break_even_threshold": 196.0
+    }
+  ],
+  "segments": [
+    {
+      "segment": "UK",
+      "n": 2503,
+      "churn_rate": 0.3891330403515781,
+      "roc_auc": 0.7676659866805082
+    },
+    {
+      "segment": "non-UK",
+      "n": 272,
+      "churn_rate": 0.34558823529411764,
+      "roc_auc": 0.7364630647860387
+    },
+    {
+      "segment": "1 order",
+      "n": 395,
+      "churn_rate": 0.6430379746835443,
+      "roc_auc": 0.6566286926900095
+    },
+    {
+      "segment": "2-4 orders",
+      "n": 912,
+      "churn_rate": 0.5164473684210527,
+      "roc_auc": 0.6411745165157359
+    },
+    {
+      "segment": "5+ orders",
+      "n": 1468,
+      "churn_rate": 0.23365122615803816,
+      "roc_auc": 0.7543686426951733
+    }
+  ],
+  "feature_importance_gain": {
+    "std_gap_days": 16497.640045166016,
+    "orders_180d": 5431.200160503387,
+    "avg_gap_days": 3928.0057792663574,
+    "revenue_90d": 3078.198956012726,
+    "frequency": 2710.579433441162,
+    "revenue_180d": 2330.885090827942,
+    "recency_to_gap_ratio": 1761.4452137947083,
+    "monetary": 1489.3788299560547,
+    "recency_days": 1087.9672870635986,
+    "tenure_days": 843.7660779953003,
+    "unique_products": 449.94442653656006,
+    "avg_items_per_order": 377.1379508972168,
+    "avg_lines_per_order": 365.79879999160767,
+    "cancel_rate": 364.8878664970398,
+    "avg_order_value": 332.78544759750366,
+    "revenue_trend": 332.76343870162964,
+    "n_cancel_invoices": 107.20696926116943,
+    "orders_90d": 101.08531045913696,
+    "revenue_30d": 96.31848096847534,
+    "orders_trend": 39.03562021255493,
+    "is_uk": 23.879759311676025,
+    "orders_30d": 0.0
+  }
+}
